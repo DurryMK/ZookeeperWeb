@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script
+	src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>zkLogin</title>
+</head>
+<body>
+	<div class="col-lg-4 col-lg-offset-4 thumbnail" style="margin-top: 10%;border:1px solid #C0C0C0;">
+		<form action="zk.do" method="post">
+		<input type="hidden" name="op" value="login">
+			<input type="hidden" name="op" value="login">
+			<div class="col-lg-12 thumbnail" style="text-align: center;border:1px solid #C0C0C0;margin-top: 2px">
+				<label for="email">ZKLOGIN</label>
+			</div>
+			<div class="form-group">
+				<label>zk服务器地址</label> <input type="text" class="form-control"
+					name="connectString" value="node1:2181,node2:2181,node3:2181">
+			</div>
+			<div class="form-group">
+				<label>连接超时时间</label> <input type="text" class="form-control"
+					name="time" value="10000">
+			</div>
+			<button type="submit" class="btn btn-primary">登录</button>
+		</form>
+	</div>
+</body>
+</html>

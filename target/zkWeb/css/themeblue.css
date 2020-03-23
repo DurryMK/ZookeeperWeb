@@ -1,0 +1,92 @@
+@CHARSET "UTF-8";
+
+[v-cloak]{
+    		display:none;
+		}
+.AppStyle{
+margin-top: 10px;
+background-color:#015961;
+}
+
+.title{
+	text-align: center;
+	border: 1px solid #8a8787;
+}
+.searchBoxStyle{
+	border: 1px solid #286090;
+	background-color: #286090;
+}
+.treeBoxStyle{
+	border:1px solid #8a8787; 
+	height: 800px; 
+	float: left;
+	background-color:"#5FC0CE";
+}
+.inputBox{
+	width: 80%;
+	margin-left: 2%;
+	 float:left;
+}
+.searchButton{
+	width: 15%;
+	margin-left: 1%;
+}
+
+.tree{
+	height:85%;
+	scrollbar-width: none;
+	overflow: auto;
+	margin-top: 10px;
+}
+.contentBox{
+	border: 1px solid #8a8787;
+	height: 800px;
+	float: left;
+	background-color: #106D6D;
+}
+.contentPath{
+	border: 1px solid #8a8787;
+	
+}
+.pathTitle{
+	float: left;
+}
+.path{
+	overflow: auto;
+}
+.options{
+	width: 100%;
+}
+.contentPanel{
+	border: 1px solid #8a8787;
+	height: 92%;
+	background-color: beige;
+}
+.Panel{
+	scrollbar-width: none;
+	overflow: auto;
+	border: 1px solid #8a8787;
+	height: 93%;
+	overflow: auto;
+	background-color:beige;
+}
+.key{
+	float:left;
+	border: 1px solid #8a8787;
+	width: 20%;
+	text-align: center;
+}
+.value{
+	float:left;
+	margin-left:5%;
+	border: 1px solid #8a8787;
+	width: 73%;
+	overflow: auto;
+}
+.versionBox{
+	text-align: center;
+}
+.version{
+	font-size: 10px;
+	color: white;
+}

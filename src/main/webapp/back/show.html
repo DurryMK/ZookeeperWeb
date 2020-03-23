@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<link
+	href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="../css/themeblue.css" rel="stylesheet">
+<script
+	src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+<script src="../js/bootstrap-treeview.min.js"></script>
+<title>Zookeeper管理页面</title>
+</head>
+<body>
+	<div id="App" class="col-lg-10 col-lg-offset-1 AppStyle thumbnail "
+		v-cloak>
+		<div class="col-lg-12 thumbnail title">
+			<label>ZOOKEEPER</label>
+		</div>
+		<div class="col-lg-3 thumbnail treeBoxStyle">
+			<div class="thumbnail title">
+				<label>节点目录</label>
+			</div>
+			<div class="thumbnail searchBoxStyle">
+				<input class="thumbnail inputBox" v-model="key" type="text"
+					v-on:keyup.enter="searchNode" placeholder="输入节点名">
+				<button class="btn btn-primary btn-sm searchButton"
+					v-on:click="searchNode">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+			</div>
+			<div v-show="show!=0" id="tree" class="tree"></div>
+			<div v-show="show==0">
+				<div>
+					<label>正在加载节点目录....</label>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-9 thumbnail contentBox">
+			<div class="col-lg-12 thumbnail contentPath">
+				<div class="pathTitle">
+					<label>当前路径为:</label>
+				</div>
+				<div class="col-lg-9 path">
+					<label>{{path}}</label>
+				</div>
+				<div class="col-lg-2 themeButton">
+					<div class="btn-group">
+						<button type="button" class="btn btn-sm " v-bind:class="button">{{theme}}</button>
+						<button type="button" class="btn btn-sm dropdown-toggle"
+							data-toggle="dropdown">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><button class="btn btn-primary btn-sm options"
+									v-on:click="changeTheme('blue','btn-primary')">blue</button></li>
+							<li><button class="btn btn-danger btn-sm options"
+									v-on:click="changeTheme('orange','btn-danger')">orange</button></li>
+							<li><button class="btn btn-default btn-sm options"
+									v-on:click="changeTheme('white','btn-default')">white</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 thumbnail contentPanel">
+				<div class="col-lg-9 col-lg-offset-1 thumbnail title">
+					<label>节点详情:{{nodeName}}</label>
+				</div>
+				<div class="col-lg-9 col-lg-offset-1 thumbnail Panel">
+					<div v-show="show==1" style="margin-left: 2%">
+						<div v-for="(item,index) in content">
+							<div class="thumbnail key">
+								<label>{{index}}</label>
+							</div>
+							<div class="thumbnail value">
+								<label><span>&nbsp;&nbsp;&nbsp;{{item}}</span></label>
+							</div>
+						</div>
+					</div>
+					<div v-show="show==2" style="margin-left: 10%">
+						<div>
+							<label>无权限查看"{{path}}"的信息</label>
+						</div>
+					</div>
+					<div v-show="show==0" style="margin-left: 10%">
+						<div>
+							<label>正在加载节点信息....</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12 versionBox">
+			<span class="version">Copyright © 2020 Durry All rights reserved.</span>
+		</div>
+	</div>
+</body>
+<script src="../js/show.js"></script>
+</html>
