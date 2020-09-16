@@ -13,8 +13,28 @@
   	<description></description>
   	<servlet-class>com.zk.servlet.ZkServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>asdasd</servlet-name>
+  	<display-name>asdasd</display-name>
+  	<description></description>
+  	<servlet-class>com.zk.servlet.asdasd</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>aaa</servlet-name>
+  	<display-name>aaa</display-name>
+  	<description></description>
+  	<servlet-class>com.zk.servlet.aaa</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>ZkServlet</servlet-name>
   	<url-pattern>/zk.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>asdasd</servlet-name>
+  	<url-pattern>/t.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>aaa</servlet-name>
+  	<url-pattern>/a.do</url-pattern>
   </servlet-mapping>
 </web-app>

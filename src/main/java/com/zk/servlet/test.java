@@ -10,7 +10,11 @@ public class test {
 	public static void main(String[] args) {
 		
 		
-		System.out.println(str+"asd");
+		String s = "asdasda";
+		
+		String[] ss = s.split("c");
+		
+		System.out.println(ss[1]);
 		}
 	public void getChild(ZooKeeper zkCli,  String path) throws Exception {
         

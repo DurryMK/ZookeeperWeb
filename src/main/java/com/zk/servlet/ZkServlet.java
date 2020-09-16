@@ -57,21 +57,16 @@ public class ZkServlet extends HttpServlet {
 	}
 
 	private void setTheme(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		String theme = request.getParameter("theme");
-		this.theme=theme;
+		theme = request.getParameter("theme");
 		Map<String,String> m = new HashMap<String,String>();
 		m.put("theme", "1");
 		response.getWriter().append(new Gson().toJson(m));
 	}
 
 	private void getTheme(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		
 		Map<String,String> m = new HashMap<String,String>();
-		
 		m.put("theme", theme);
-		
 		response.getWriter().append(new Gson().toJson(m));
-		
 	}
 
 	private ZooKeeper getZK(HttpServletRequest request,HttpServletResponse response) throws IOException {
